@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       squares.push(square);
     }
     generateRandomNumbers();
+    generateRandomNumbers();
   };
   playBoard();
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let randomNumber = Math.floor(Math.random() * squares.length);
     if (squares[randomNumber].innerHTML == 0) {
       squares[randomNumber].innerHTML = 2;
+      checkForGameOver();
     } else generateRandomNumbers();
   }
   // swipe right
@@ -218,16 +220,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // for lose, check if there is no zeroes in the board
 
-  const checkForNoZeroes = () => {
+  function checkForGameOver() {
     let zeros = 0;
     for (let i = 0; i < squares.length; i++) {
       if (squares[i].innerHTML == 0) {
         zeros++;
       }
     }
-    if (zeros === 0) {
-      resultDisplay.innerHTML = 'You lose';
+    if (zeros == 0) {
+      resultDisplay.innerHTML = 'You loose';
       document.removeEventListener('Keyup', control);
     }
-  };
+  }
 });
