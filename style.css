@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 40%;
+  height: 70vh;
+  border: 10px solid orange;
+  background-color: black;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid div {
+  margin: 10px 10px;
+  width: 80%;
+  height: 70%;
+  background-color: rgb(155, 165, 165);
+  font-size: 2.3rem;
+  border: 3px solid orange;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.score-title { 
+  color: Red;
+  font-size: 3rem;
+}
+
+#score {
+  font-size: 3rem;
+  padding: 50px;
+}
