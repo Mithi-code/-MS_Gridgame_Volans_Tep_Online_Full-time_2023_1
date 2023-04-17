@@ -8,6 +8,7 @@
   border-radius: 15px;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .grid div {
@@ -24,12 +25,37 @@
   background-color: antiquewhite;
 }
 
-.score-title { 
-  color: Red;
-  font-size: 3rem;
+.score-container {
+  width: 40%;
+  height: 70px;
+  border-radius: 15px;
+  background-color: rgb(26, 167, 82);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  border: 10px solid orange;
+  margin: auto;
+  margin-bottom: 30px !important;
+  margin-top: 30px !important;
 }
 
-#score {
-  font-size: 3rem;
-  padding: 50px;
+@media only screen and (max-width: 1100px) {
+  .grid {
+    width: 60%;
+  }
+
+  .score-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    width: 90%;
+  }
+
+  .score-container {
+    width: 90%;
+  }
 }
